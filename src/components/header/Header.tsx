@@ -12,12 +12,11 @@ function Header() {
   const { totalCount } = useSelector((state:any) => state.cart)
 
   return (
-    <header>
       <div className="d-flex flex-column flex-md-row align-items-center mb-3 border-bottom header">
         <img src={iconLogo} />
         <Link
-          to="/"
-          className="d-flex align-items-center text-dark text-decoration-none"
+            to="/"
+            className="d-flex align-items-center text-dark text-decoration-none"
         >
           <img src={iconChallenge} />
           <span className="fs-4">チャレンジ</span>
@@ -51,7 +50,6 @@ function Header() {
           <img src={iconMenu} />
         </Link>
       </div>
-    </header>
   )
 }
 
