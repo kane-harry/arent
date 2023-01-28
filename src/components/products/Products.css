@@ -25,3 +25,18 @@
 
     color: #FFFFFF;
 }
+.product-info {
+    position: absolute;
+    margin-top: -9px;
+    margin-left: -17px;
+    background: #FFCC21;
+    border-radius: 0px;
+    padding: 0;
+    width: 117px;
+    color: white;
+}
+
+.product-card {
+    width: 234px;
+    height: 234px;
+}

@@ -74,21 +74,16 @@ function Products() {
         <div className="col" key={item.id}>
           <div className="card h-100 product-card">
             <div className="img-grid mb-3">
-              <img src={item.image} className="card-img-top" alt={item.title} />
+              <img src={item.image} className="" alt={item.title} />
             </div>
             <div className="card-body">
-              <h5 className="card-title">${item.price}</h5>
-              <p className="card-text">
-                {item.description.substring(0, 50)}...
-              </p>
-              <button className="btn btn-outline-danger me-2">Buy now</button>
               <button
                 onClick={() => {
                   addToCart(item)
                 }}
-                className="btn btn-outline-primary"
+                className="btn product-info"
               >
-                Add to cart
+                {item.price}
               </button>
             </div>
           </div>
