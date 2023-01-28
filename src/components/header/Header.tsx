@@ -18,16 +18,16 @@ function Header() {
             to="/"
             className="d-flex align-items-center text-decoration-none header-link"
         >
-          <img src={iconChallenge} />
-          <span className="fs-4">チャレンジ</span>
+          <img src={iconChallenge} className="header-image" />
+          <span className="">チャレンジ</span>
         </Link>
 
         <Link
             to="/"
             className="d-flex align-items-center text-decoration-none header-link"
         >
-          <img src={iconMyRecord} />
-          <span className="fs-4">自分の記録</span>
+          <img src={iconMyRecord} className="header-image"/>
+          <span className="">自分の記録</span>
         </Link>
 
         <nav className="d-inline-flex mt-2 mt-md-0 ms-md-auto">
@@ -41,7 +41,7 @@ function Header() {
             </Link>
           </span>
         </nav>
-        <span className="fs-4 header-link">自分の記録</span>
+        <span className="header-link icon-info">自分の記録</span>
 
         <Link
             to="/"
