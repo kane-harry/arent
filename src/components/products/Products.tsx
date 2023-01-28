@@ -8,29 +8,40 @@ import {
   getTotalAmount,
 } from '../../features/useCartSlice'
 import { useDispatch } from 'react-redux'
-
+interface IProduct {
+  id: string,
+  title: string,
+  price: string,
+  image: string,
+  description: string
+}
+interface IError {
+  status: string
+}
 function Products() {
   const dispatch = useDispatch()
 
-  let productObj = {
+  let productObj: IProduct = {
     id: '',
     title: '',
     price: '',
     image: '',
+    description: '',
   }
 
-  const addToCart = (item) => {
+  const addToCart = (item: IProduct) => {
     productObj = {
       id: item.id,
       title: item.title,
       price: item.price,
       image: item.image,
+      description: item.description,
     }
     dispatch(addCartProduct(productObj))
-    dispatch(getCartCount())
-    dispatch(getSubTotal())
-    dispatch(calculateTax())
-    dispatch(getTotalAmount())
+    dispatch(getCartCount({}))
+    dispatch(getSubTotal({}))
+    dispatch(calculateTax({}))
+    dispatch(getTotalAmount({}))
   }
 
   const {
@@ -38,7 +49,7 @@ function Products() {
     isLoading: isProductLoading,
     isSuccess: isProductSuccess,
     isError: isProductError,
-    error: prouctError,
+    error: productError,
   } = useGetProductsQuery({ refetchOnMountOrArgChange: true })
 
   useEffect(() => {}, [dispatch])
@@ -54,7 +65,7 @@ function Products() {
       </div>
     )
   } else if (isProductSuccess) {
-    getData = products.map((item) => {
+    getData = products.map((item: IProduct) => {
       return (
         <div className="col" key={item.id}>
           <div className="card h-100 product-card">
@@ -83,7 +94,7 @@ function Products() {
   } else if (isProductError) {
     getData = (
       <div className="alert alert-danger w-100 text-center" role="alert">
-        {prouctError.status} {JSON.stringify(prouctError)}
+        {'status' in productError ? productError.status : ''} {JSON.stringify(productError)}
       </div>
     )
   }
