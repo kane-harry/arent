@@ -1,4 +1,5 @@
 import React from 'react'
+import './Header.css'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import iconMenu from './icon_menu.svg'
@@ -12,7 +13,7 @@ function Header() {
 
   return (
     <header>
-      <div className="d-flex flex-column flex-md-row align-items-center pb-3 mb-3 border-bottom">
+      <div className="d-flex flex-column flex-md-row align-items-center mb-3 border-bottom header">
         <img src={iconLogo} />
         <Link
           to="/"

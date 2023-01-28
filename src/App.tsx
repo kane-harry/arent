@@ -9,7 +9,7 @@ import Cart from './components/cart/Cart'
 
 function App() {
   return (
-    <div className="container py-3">
+    <div>
       <Header />
       <Routes>
         <Route path="/" element={<Products />} />
