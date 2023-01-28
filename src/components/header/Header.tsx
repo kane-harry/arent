@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-
 import { useSelector } from 'react-redux'
+import iconMenu from './icon_menu.svg'
 
 function Header() {
   const { totalCount } = useSelector((state:any) => state.cart)
@@ -52,6 +52,13 @@ function Header() {
             </Link>
           </span>
         </nav>
+
+        <Link
+            to="/"
+            className="d-flex align-items-center text-dark text-decoration-none"
+        >
+          <img src={iconMenu} />
+        </Link>
       </div>
     </header>
   )
