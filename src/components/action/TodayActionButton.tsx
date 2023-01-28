@@ -6,10 +6,10 @@ import actionSnack from './action_snack.svg'
 export default function TodayActionButton() {
     return (
         <div className={'d-flex justify-content-between today-action'}>
-            <img src={actionMorning}/>
-            <img src={actionLunch}/>
-            <img src={actionDinner}/>
-            <img src={actionSnack}/>
+            <img src={actionMorning} alt=""/>
+            <img src={actionLunch} alt=""/>
+            <img src={actionDinner} alt=""/>
+            <img src={actionSnack} alt=""/>
         </div>
     )
 }
