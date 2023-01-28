@@ -105,7 +105,7 @@ function Products() {
 
   return (
     <div className="body-content">
-      <div>
+      <div className="d-flex">
         <TodayStatistic />
         <TodayChart />
       </div>
