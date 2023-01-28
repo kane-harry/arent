@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 function Header() {
-  const { totalCount } = useSelector((state) => state.cart)
+  const { totalCount } = useSelector((state:any) => state.cart)
 
   return (
     <header>
