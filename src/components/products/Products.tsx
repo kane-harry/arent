@@ -101,7 +101,7 @@ function Products() {
 
   return (
     <div className="body-content">
-      <div className="row row-cols-1 row-cols-md-3 row-cols-sm-2 g-4">
+      <div className="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4">
         {getData}
       </div>
     </div>
