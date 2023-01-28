@@ -52,3 +52,8 @@
   width: 380px;
   height: auto;
 }
+
+.body-content {
+  margin-left: 160px;
+  margin-right: 160px;
+}
