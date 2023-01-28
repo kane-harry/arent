@@ -1,0 +1,9 @@
+.today-chart {
+    display: flex;
+    position: relative;
+    height: 312px;
+    width: calc(100% - 540px);
+    left: 0px;
+    border-radius: 0px;
+    background: #2E2E2E;
+}

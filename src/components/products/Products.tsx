@@ -9,6 +9,9 @@ import {
   getTotalAmount,
 } from '../../features/useCartSlice'
 import { useDispatch } from 'react-redux'
+import TodayStatistic from "../statistic/TodayStatistic";
+import TodayChart from "../chart/TodayChart";
+import TodayActionButton from "../action/TodayActionButton";
 export interface IProduct {
   id: string,
   title: string,
@@ -102,6 +105,11 @@ function Products() {
 
   return (
     <div className="body-content">
+      <div>
+        <TodayStatistic />
+        <TodayChart />
+      </div>
+      <TodayActionButton />
       <div className="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4">
         {getData}
       </div>
