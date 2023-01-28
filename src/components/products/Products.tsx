@@ -105,11 +105,15 @@ function Products() {
       <div className="row row-cols-1 row-cols-md-4 row-cols-sm-2 g-4">
         {getData}
       </div>
-      <div className={'d-flex justify-content-center mt-5 mb-5'}>
-        <button className={"rounded btn-load-more"}>
-          <span className={'load-more'}>記録をもっと見る</span>
-        </button>
-      </div>
+      {
+        isProductSuccess && (
+            <div className={'d-flex justify-content-center mt-5 mb-5'}>
+              <button className={"rounded btn-load-more"}>
+                <span className={'load-more'}>記録をもっと見る</span>
+              </button>
+            </div>
+        )
+      }
     </div>
   )
 }
