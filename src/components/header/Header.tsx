@@ -45,7 +45,7 @@ function Header() {
 
         <Link
             to="/"
-            className="d-flex align-items-center text-decoration-none header-link"
+            className="d-flex align-items-center text-decoration-none"
         >
           <img src={iconMenu} />
         </Link>
