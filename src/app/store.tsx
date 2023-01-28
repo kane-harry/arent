@@ -22,7 +22,9 @@ const persistConfig = {
   storage: storage,
   blacklist: ['apiProductSlice'],
 }
-
+export interface IRootReducer {
+  cart: any
+}
 export const rootReducers = combineReducers({
   cart: useCartReducer,
   [apiSlice.reducerPath]: apiSlice.reducer,

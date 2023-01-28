@@ -14,19 +14,21 @@ import {
   calculateTax,
   getTotalAmount,
 } from '../../features/useCartSlice'
+import {IProduct} from "../products/Products";
+import {IRootReducer} from "../../app/store";
 
 function Cart() {
   const dispatch = useDispatch()
   const { cartItems, subAmount, tax, totalAmount } = useSelector(
-    (state) => state.cart,
+    (state: IRootReducer) => state.cart,
   )
 
   useEffect(() => {
-    dispatch(getCartProducts())
-    dispatch(getSubTotal())
-    dispatch(getCartCount())
-    dispatch(calculateTax())
-    dispatch(getTotalAmount())
+    dispatch(getCartProducts({}))
+    dispatch(getSubTotal({}))
+    dispatch(getCartCount({}))
+    dispatch(calculateTax({}))
+    dispatch(getTotalAmount({}))
   }, [dispatch])
 
   let showCart
@@ -46,7 +48,7 @@ function Cart() {
           <tbody>
             {cartItems !== undefined &&
               cartItems.length > 0 &&
-              cartItems.map((product, index) => {
+              cartItems.map((product: IProduct, index:number) => {
                 return (
                   <tr key={product.id}>
                     <td className="col-md-4">
@@ -63,10 +65,10 @@ function Cart() {
                           className="btn btn-sm btn-outline-primary inline-block"
                           onClick={() => {
                             dispatch(increment(product.id))
-                            dispatch(getSubTotal())
-                            dispatch(getCartCount())
-                            dispatch(calculateTax())
-                            dispatch(getTotalAmount())
+                            dispatch(getSubTotal({}))
+                            dispatch(getCartCount({}))
+                            dispatch(calculateTax({}))
+                            dispatch(getTotalAmount({}))
                           }}
                         >
                           <svg
@@ -90,10 +92,10 @@ function Cart() {
                           className="btn btn-sm btn-outline-primary inline-block"
                           onClick={() => {
                             dispatch(decrement(product.id))
-                            dispatch(getSubTotal())
-                            dispatch(getCartCount())
-                            dispatch(calculateTax())
-                            dispatch(getTotalAmount())
+                            dispatch(getSubTotal({}))
+                            dispatch(getCartCount({}))
+                            dispatch(calculateTax({}))
+                            dispatch(getTotalAmount({}))
                           }}
                         >
                           <svg
@@ -114,7 +116,7 @@ function Cart() {
                     </td>
                     <td className="col-sm-1 col-md-1 text-center">
                       <strong>
-                        {parseFloat(product.price * product.quantity).toFixed(
+                        {parseFloat(String(product.price * product.quantity)).toFixed(
                           2,
                         )}
                       </strong>
@@ -124,10 +126,10 @@ function Cart() {
                         type="button"
                         onClick={() => {
                           dispatch(removeCartItem(product.id))
-                          dispatch(getSubTotal())
-                          dispatch(getCartCount())
-                          dispatch(calculateTax())
-                          dispatch(getTotalAmount())
+                          dispatch(getSubTotal({}))
+                          dispatch(getCartCount({}))
+                          dispatch(calculateTax({}))
+                          dispatch(getTotalAmount({}))
                         }}
                         className="btn btn-sm btn-outline-danger"
                       >

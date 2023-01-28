@@ -8,10 +8,11 @@ import {
   getTotalAmount,
 } from '../../features/useCartSlice'
 import { useDispatch } from 'react-redux'
-interface IProduct {
+export interface IProduct {
   id: string,
   title: string,
-  price: string,
+  price: number,
+  quantity: number,
   image: string,
   description: string
 }
@@ -21,7 +22,8 @@ function Products() {
   let productObj: IProduct = {
     id: '',
     title: '',
-    price: '',
+    price: 0,
+    quantity: 0,
     image: '',
     description: '',
   }
@@ -33,6 +35,7 @@ function Products() {
       price: item.price,
       image: item.image,
       description: item.description,
+      quantity: item.quantity,
     }
     dispatch(addCartProduct(productObj))
     dispatch(getCartCount({}))
