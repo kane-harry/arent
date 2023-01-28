@@ -11,7 +11,7 @@ export default function TodayStatistic() {
     return (
         <div className={"today-statistic self-center"}>
             <img src={icon} className="absolute left-0"/>
-            <img src={spinner} className={"cursor-pointer absolute top-0 left-0 mt-16 ml-40 hover:shadow-outline"}/>
+            <img src={spinner} className={"cursor-pointer absolute top-0 left-0 mt-16 ml-40 hover:shadow-outline circle"}/>
             <label className={"absolute month-day"}>{`${month}/${day}`}</label>
             <label className={"absolute percent"}>{percent}</label>
         </div>

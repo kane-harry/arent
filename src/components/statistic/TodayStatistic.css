@@ -6,8 +6,15 @@
     left: 0px;
     border-radius: 0px;
 }
+
+.circle {
+    position: absolute;
+    margin-top: 64px;
+    margin-left: 160px;
+}
+
 .month-day {
-    position: relative;
+    position: absolute;
     z-index: 10;
     color: white;
     margin-left: 205px;
@@ -18,10 +25,10 @@
 }
 
 .percent {
-    position: relative;
+    position: absolute;
     z-index: 20;
     color: white;
-    margin-left: 10px;
+    margin-left: 255px;
     margin-top: 140px;
     font-size: 25px;
     font-weight: 400;
