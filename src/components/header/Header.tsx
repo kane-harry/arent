@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import iconMenu from './icon_menu.svg'
 import iconInfo from './icon_info.svg'
+import iconMyRecord from './icon_my_record.svg'
 
 function Header() {
   const { totalCount } = useSelector((state:any) => state.cart)
@@ -31,6 +32,14 @@ function Header() {
             ></path>
           </svg>
           <span className="fs-4">React cart example</span>
+        </Link>
+
+        <Link
+            to="/"
+            className="d-flex align-items-center text-dark text-decoration-none"
+        >
+          <img src={iconMyRecord} />
+          <span className="fs-4">自分の記録</span>
         </Link>
 
         <nav className="d-inline-flex mt-2 mt-md-0 ms-md-auto">
