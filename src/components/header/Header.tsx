@@ -12,11 +12,11 @@ function Header() {
   const { totalCount } = useSelector((state:any) => state.cart)
 
   return (
-      <div className="d-flex flex-column flex-md-row align-items-center mb-3 border-bottom header">
+      <div className="d-flex flex-column flex-md-row align-items-center mb-3 border-bottom header justify-content-between align-items-center">
         <img src={iconLogo} />
         <Link
             to="/"
-            className="d-flex align-items-center text-dark text-decoration-none"
+            className="d-flex align-items-center text-decoration-none header-link"
         >
           <img src={iconChallenge} />
           <span className="fs-4">チャレンジ</span>
@@ -24,15 +24,15 @@ function Header() {
 
         <Link
             to="/"
-            className="d-flex align-items-center text-dark text-decoration-none"
+            className="d-flex align-items-center text-decoration-none header-link"
         >
           <img src={iconMyRecord} />
           <span className="fs-4">自分の記録</span>
         </Link>
 
         <nav className="d-inline-flex mt-2 mt-md-0 ms-md-auto">
-          <span className="cart py-2 text-dark text-decoration-none position-relative">
-            <Link to="/cart">
+          <span className="cart py-2 text-decoration-none position-relative">
+            <Link to="/cart" className="header-link">
               <img src={iconInfo} />
               <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                 {totalCount}
@@ -41,11 +41,11 @@ function Header() {
             </Link>
           </span>
         </nav>
-        <span className="fs-4">自分の記録</span>
+        <span className="fs-4 header-link">自分の記録</span>
 
         <Link
             to="/"
-            className="d-flex align-items-center text-dark text-decoration-none"
+            className="d-flex align-items-center text-decoration-none header-link"
         >
           <img src={iconMenu} />
         </Link>
