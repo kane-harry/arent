@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/arent/static/css/main.09a3193b.css",
+    "main.js": "/arent/static/js/main.6f2fb0e9.js",
+    "static/media/d01.png": "/arent/static/media/d01.2e99dc1606bf66c960f9.png",
+    "static/media/action_morning.svg": "/arent/static/media/action_morning.8efa7adfadafd6839a898c15a8ef0df8.svg",
+    "static/media/action_snack.svg": "/arent/static/media/action_snack.7a9c3c0d373cb4e44878a42849d2af91.svg",
+    "static/media/action_dinner.svg": "/arent/static/media/action_dinner.197ba52977544db4b3a9b2f7e6b2384d.svg",
+    "static/media/action_lunch.svg": "/arent/static/media/action_lunch.d65a963d3ed21597685488ad39d73e0f.svg",
+    "static/media/icon_challenge.svg": "/arent/static/media/icon_challenge.548416720843e020d5e77c42ffca7648.svg",
+    "static/media/empty-cart.svg": "/arent/static/media/empty-cart.dfe53c4442a49ef4b27c3ede06884184.svg",
+    "static/media/logo.svg": "/arent/static/media/logo.7f90fb8e3b0375095776d8c1b7fe61d0.svg",
+    "static/media/icon_my_record.svg": "/arent/static/media/icon_my_record.72992fa445855a4127c4c8b22ccc0db1.svg",
+    "static/media/spinner.svg": "/arent/static/media/spinner.60fec37e3228aacb66f4fcea058f59c5.svg",
+    "index.html": "/arent/index.html",
+    "static/media/icon_info.svg": "/arent/static/media/icon_info.2f0fb7a527522e5679001d47de38f36e.svg",
+    "static/media/icon_menu.svg": "/arent/static/media/icon_menu.6469246eee11f0dc45d5e3811730620e.svg",
+    "main.09a3193b.css.map": "/arent/static/css/main.09a3193b.css.map",
+    "main.6f2fb0e9.js.map": "/arent/static/js/main.6f2fb0e9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.09a3193b.css",
+    "static/js/main.6f2fb0e9.js"
+  ]
+}
