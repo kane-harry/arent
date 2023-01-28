@@ -15,9 +15,6 @@ interface IProduct {
   image: string,
   description: string
 }
-interface IError {
-  status: string
-}
 function Products() {
   const dispatch = useDispatch()
 
