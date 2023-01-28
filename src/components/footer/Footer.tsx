@@ -11,7 +11,7 @@ const navigation = [
 
 export default function Footer() {
     return (
-        <div className={'footer h-32 justify-between justify-content-between'}>
+        <div className={'footer justify-content-between align-items-center'}>
             {navigation.map((item) => (
                 <span key={item.name} className={'footer-items self-center'}>{item.name}</span>
             ))}
